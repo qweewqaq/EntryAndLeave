@@ -1,16 +1,19 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import { DatePicker } from 'antd';
+import { Router,hashHistory,Route } from 'react-router';
+import Leave from './Leave/leave';
 
-function App() {
-  return (
-    <div style={{ margin: 100 }}>
-      <h1>AntDesign Demo</h1>
-      <hr /><br />
-      <DatePicker />
-    </div>
-  );
+export  class Routes extends Component{
+
+    render(){
+        console.log('Routes')
+        return(
+            <Router history={hashHistory}>
+                <Route path="/leave" component={Leave}/>
+
+
+            </Router>
+        );
+    }
 }
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Routes/>, document.getElementById('root'));
