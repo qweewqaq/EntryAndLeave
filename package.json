@@ -40,7 +40,7 @@
   "scripts": {
     "build": "atool-build",
     "lint": "eslint --ext .js,.jsx src/",
-    "start": "dora --plugins webpack",
+    "start": "dora --plugins webpack --port=8009",
     "test": "atool-test-mocha ./**/__tests__/*-test.js"
   },
   "name": "c",
