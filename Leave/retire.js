@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
-export default class Leave extends Component {
+export default class Retire extends Component {
     render(){
         return(
             <Layout>
