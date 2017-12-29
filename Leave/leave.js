@@ -1,9 +1,11 @@
+//员工主动请求离职
 import React,{Component} from 'react';
 import { Router, Route, Link, hashHistory } from 'react-router';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 import LeaveApplyForm from '../FormComponent/LeaveApplyForm'
+import WorkConnect from '../FormComponent/WorkConnect';
 export default class Leave extends Component {
     render(){
         return(
@@ -30,13 +32,13 @@ export default class Leave extends Component {
                             style={{ height: '100%', borderRight: 0 }}
                         >
                             <SubMenu key="sub1" title={<span><Icon type="user" />离职申请</span>}>
-                                <Menu.Item key="1">option1</Menu.Item>
+                               <Menu.Item key="1"><Link to="/LeaveApplyForm">离职申请单</Link></Menu.Item>
                                 <Menu.Item key="2">option2</Menu.Item>
                                 <Menu.Item key="3">option3</Menu.Item>
                                 <Menu.Item key="4">option4</Menu.Item>
                             </SubMenu>
                             <SubMenu key="sub2" title={<span><Icon type="laptop" />工作交接</span>}>
-                                <Menu.Item key="5">option5</Menu.Item>
+                                <Menu.Item key="5">工作交接单</Menu.Item>
                                 <Menu.Item key="6">option6</Menu.Item>
                                 <Menu.Item key="7">option7</Menu.Item>
                                 <Menu.Item key="8">option8</Menu.Item>
@@ -56,7 +58,11 @@ export default class Leave extends Component {
                             <Breadcrumb.Item>App</Breadcrumb.Item>
                         </Breadcrumb>
                         <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
-                                  <LeaveApplyForm/>
+                            <Router history={hashHistory}>
+                                <Route name="home" breadcrumbName="Home"  component={<WorkConnect/>}>
+
+                                </Route>
+                            </Router>
                         </Content>
                     </Layout>
                 </Layout>

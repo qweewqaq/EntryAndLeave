@@ -1,3 +1,4 @@
+//员工被公司劝退或者退休
 import React,{Component} from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { SubMenu } = Menu;

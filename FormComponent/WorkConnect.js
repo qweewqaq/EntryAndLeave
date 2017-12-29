@@ -1,9 +1,9 @@
-//员工离职申请单
+//工作交接单
 import React,{Component} from 'react';
 import {Card,DatePicker,Button,Input,Select,Row,Col,Tag} from 'antd';
 const { TextArea } = Input;
 import $ from 'jquery';
-export default class LeaveApplyForm extends Component {
+export default class WorkConnect extends Component {
     constructor(props) {
         super(props);
         this.state = {
