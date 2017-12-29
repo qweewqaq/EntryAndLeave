@@ -66,24 +66,31 @@ export default class LeaveApplyForm extends Component {
                     </Col>
                 </Row>
                 <div style={{height:20}}></div>
-                <Row >
+                <Row style={{display:this.state.display}}>
                     <Col span={3}> <Tag color="#108ee9" style={{height:25}}>项目部负责人意见</Tag></Col>
                     <Col span={19} >
                         <TextArea rows={8} style={{width:700,height:150}} />
                     </Col>
                 </Row>
                 <div style={{height:20}}></div>
-                <Row >
+                <Row style={{display:this.state.display}}>
                     <Col span={3}> <Tag color="#108ee9" style={{height:25}}>综合部意见</Tag></Col>
                     <Col span={19} >
                         <TextArea rows={8} style={{width:700,height:150}}  />
                     </Col>
                 </Row>
                 <div style={{height:20}}></div>
-                <Row >
+                <Row style={{display:this.state.display}}>
                     <Col span={3}> <Tag color="#108ee9" style={{height:25}}>总经理意见</Tag></Col>
                     <Col span={19} >
                         <TextArea rows={8} style={{width:700,height:150}}  />
+                    </Col>
+                </Row>
+                <div style={{height:20}}></div>
+                <Row >
+                    <Col span={3}> <Tag color="#108ee9" style={{height:25}}>备注</Tag></Col>
+                    <Col span={19} >
+                        <Input placeholder="还有什么想说的，走都走了" />
                     </Col>
                 </Row>
             </Card>
